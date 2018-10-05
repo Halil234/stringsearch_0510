@@ -14,31 +14,13 @@ int main(int argc, char *argv[])
 
     std::string searchString ;
 
+    std::string fileName;
+
     searchString = argv[1];
 
-    std::ofstream textFile(".hello_zusammenfile", std::ios::app);
-    if(!textFile)
-
-    {
-        std::cout << "Fileerror please correct this Halil ";
-        return 1;
-
-    }
-    int count = 3;
-    double price = 1.40;
-    std::string descript = "Apple , Bio";
-
-    for(int i=0; i <= 0 ; i++)
-    {
-
-        textFile << count << " " << price
-                 << " " << descript << std::endl;
+    fileName = argv[2];
 
 
-        textFile << "12 0.85 Banana "<< std::endl;
-    }
-
-    textFile.close();
 
     std::shared_ptr<Textsearch> initial;
 
@@ -48,7 +30,7 @@ int main(int argc, char *argv[])
 
     // initial->displayfile(".hello_zusammenfile");
 
-    std::vector<std::string> zField = initial->displayfile(".hello_zusammenfile");
+    std::vector<std::string> zField = initial->displayfile(fileName);
 
     int lineCount = 1;
 
