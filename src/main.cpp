@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     int lineCount = 1;
 
     for(std::string &z:zField){
-        std::cout << lineCount << " " << z << std::endl;
+        //std::cout << lineCount << " " << z << std::endl;
         lineCount++;
     }
 
