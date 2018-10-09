@@ -18,6 +18,7 @@ public:
     void testfunction(std::string);
     std::vector<std::string> displayfile(std::string);
     void findtext(std::vector<std::string>, std::string);
+    void analysetext(std::vector<std::string>);
 };
 
 

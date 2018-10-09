@@ -48,7 +48,7 @@ std::vector<std::string> Textsearch::displayfile(std::string filename){
         getline(textFile,lineString);
         lineCount++;
         //std::cout << "Zeilennummer " << zeilenZahl << ": " << zeilenString << std::endl;
-        zField.push_back(lineString);
+        zField.push_back( lineString);
     }
 
     lineCount = 0;
@@ -61,13 +61,13 @@ std::vector<std::string> Textsearch::displayfile(std::string filename){
 
 }
 
-void Textsearch::findtext(const std::vector<std::string> zFeldFind, std::string suchString){
+void Textsearch::findtext(const std::vector<std::string> zField, std::string suchString){
 
     int lineCount = 0;
     int stringFound = 0;
     std::string::size_type pos;
     //int
-    for(std::string &z:zField){
+    for(const std::string &z:zField){
         //std::cout << zeilenZahl << " " << z << std::endl;
         lineCount++;
         pos = z.find(suchString);
@@ -79,6 +79,20 @@ void Textsearch::findtext(const std::vector<std::string> zFeldFind, std::string 
             std::cout << z << std::endl;
             stringFound++;
         }
+
+    }
+
+    //std::cout << "the String " << suchString << " are found " << stringFound << " times ." << std::endl;
+    return ;
+}
+
+void Textsearch::analysetext(std::vector<std::string> zField) {
+
+
+    for(std::string &z:zField){
+        std::cout << "TWO " << z << std::endl;
+        std::cout << "size of the line " << z.size() << std::endl;
+
 
     }
 
